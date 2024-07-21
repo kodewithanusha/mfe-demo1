@@ -47,13 +47,13 @@ In the Remote App, copy the flights-module as it as reference while implemnting 
 
 ```
 {
-       path: 'mypath',
+       path: 'flights',
        loadChildren: () =>
             loadRemoteModule({
                type: 'module',
                remoteEntry: 'http://localhost:4201/remoteEntry.js',
-               exposedModule: './MyModuleModule'
+               exposedModule: './Module'
            })
-           .then(m => m.MyModuleModule)
+           .then(m => m.FlightsModule)
    },
 ```
